@@ -1,0 +1,91 @@
+.container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.header h1{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    margin:0;
+
+}
+
+.header p{
+
+    margin-top:8px;
+
+    color:#64748B;
+
+}
+
+.searchSection{
+
+    display:flex;
+
+}
+
+.filters{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+.documents{
+
+    min-height:420px;
+
+}
+
+.bottomGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:24px;
+
+}
+
+.leftColumn,
+
+.rightColumn{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+@media (max-width:992px){
+
+    .bottomGrid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

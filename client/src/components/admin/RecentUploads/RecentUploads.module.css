@@ -1,0 +1,223 @@
+.container{
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:18px;
+
+    padding:24px;
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.header h2{
+
+    margin:0;
+
+    color:#0F172A;
+
+}
+
+.header span{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:14px;
+
+    transition:.2s;
+
+}
+
+.item:hover{
+
+    border-color:#2563EB;
+
+    background:#F8FBFF;
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:12px;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.left h4{
+
+    margin:0;
+
+    color:#0F172A;
+
+}
+
+.left p{
+
+    margin:4px 0;
+
+    color:#475569;
+
+    font-size:14px;
+
+}
+
+.left small{
+
+    color:#94A3B8;
+
+}
+
+.right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#16A34A;
+
+    font-weight:600;
+
+    font-size:13px;
+
+}
+
+.time{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+.right button{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    cursor:pointer;
+
+}
+
+.skeleton{
+
+    height:82px;
+
+    border-radius:14px;
+
+    background:#E5E7EB;
+
+    margin-bottom:14px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.5;
+
+    }
+
+}

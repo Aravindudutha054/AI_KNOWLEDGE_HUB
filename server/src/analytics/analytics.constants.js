@@ -1,0 +1,29 @@
+export const ANALYTICS_EVENT_TYPES = {
+    LOGIN: "LOGIN",
+
+    LOGOUT: "LOGOUT",
+
+    SEARCH: "SEARCH",
+
+    AI_CHAT: "AI_CHAT",
+
+    DOCUMENT_VIEW: "DOCUMENT_VIEW",
+
+    DOCUMENT_DOWNLOAD: "DOCUMENT_DOWNLOAD",
+
+    DOCUMENT_UPLOAD: "DOCUMENT_UPLOAD",
+
+    DOCUMENT_DELETE: "DOCUMENT_DELETE",
+
+    PROFILE_UPDATE: "PROFILE_UPDATE",
+};
+
+export const TIME_PERIODS = {
+    TODAY: "today",
+
+    WEEK: "week",
+
+    MONTH: "month",
+
+    YEAR: "year",
+};

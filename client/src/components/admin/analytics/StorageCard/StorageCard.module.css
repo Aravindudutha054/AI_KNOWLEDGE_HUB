@@ -1,0 +1,12 @@
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    margin-top:12px;
+}

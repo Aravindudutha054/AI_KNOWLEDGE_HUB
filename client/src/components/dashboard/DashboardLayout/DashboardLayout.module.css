@@ -1,0 +1,95 @@
+/* =========================================================
+   DashboardLayout.module.css
+========================================================= */
+
+.layout{
+
+    display:flex;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#F6F8FA;
+
+}
+
+/* ======================================== */
+
+.right{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-width:0;
+
+}
+
+/* ======================================== */
+
+.main{
+
+    flex:1;
+
+    padding:28px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    background:#F6F8FA;
+
+}
+
+/* ======================================== */
+
+.main::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.main::-webkit-scrollbar-thumb{
+
+    background:#D4DCE2;
+
+    border-radius:999px;
+
+}
+
+.main::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ======================================== */
+
+@media (max-width:992px){
+
+    .main{
+
+        padding:22px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .layout{
+
+        flex-direction:column;
+
+    }
+
+    .main{
+
+        padding:18px;
+
+    }
+
+}

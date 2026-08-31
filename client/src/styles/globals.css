@@ -1,0 +1,70 @@
+@import "./variables.css";
+@import "./utilities.css";
+@import "./components.css";
+@import "./animations.css";
+@import "./scrollbar.css";
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--color-background);
+
+    color:var(--color-text-primary);
+
+    font-family:var(--font-family);
+
+    font-size:16px;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+button{
+
+    border:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+input{
+
+    font:inherit;
+
+}

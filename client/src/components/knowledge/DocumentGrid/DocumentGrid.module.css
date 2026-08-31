@@ -1,0 +1,121 @@
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+}
+
+/* =====================================
+   Skeleton Card
+===================================== */
+
+.skeleton{
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.skeletonIcon{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:14px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonTitle{
+
+    width:80%;
+
+    height:18px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonLine{
+
+    width:60%;
+
+    height:14px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonButtons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:12px;
+
+}
+
+.skeletonButtons div{
+
+    flex:1;
+
+    height:42px;
+
+    border-radius:10px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.55;
+
+    }
+
+}

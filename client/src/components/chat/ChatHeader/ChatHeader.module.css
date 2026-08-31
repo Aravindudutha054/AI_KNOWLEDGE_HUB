@@ -1,0 +1,113 @@
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 32px;
+
+    background:#fff;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:16px;
+
+    background:#2563EB;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.left h1{
+
+    margin:0;
+
+    font-size:24px;
+
+    color:#111827;
+
+}
+
+.left p{
+
+    margin-top:4px;
+
+    color:#64748B;
+
+}
+
+.right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.badge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    font-weight:600;
+
+}
+
+.status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:10px 14px;
+
+    border-radius:999px;
+
+    background:#ECFDF5;
+
+    color:#16A34A;
+
+    font-weight:600;
+
+}

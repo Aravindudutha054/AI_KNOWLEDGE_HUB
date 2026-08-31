@@ -1,0 +1,63 @@
+.container{
+
+    margin-top:18px;
+
+}
+
+.container h4{
+
+    margin-bottom:12px;
+
+    color:#374151;
+
+}
+
+.card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    margin-bottom:10px;
+
+}
+
+.card div{
+
+    flex:1;
+
+}
+
+.card p{
+
+    margin-top:4px;
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+.card span{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+}

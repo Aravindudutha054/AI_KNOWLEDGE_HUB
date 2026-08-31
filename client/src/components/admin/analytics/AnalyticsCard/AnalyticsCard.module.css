@@ -1,0 +1,73 @@
+.card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 24px rgba(0,0,0,.06);
+
+}
+
+.left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.title{
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+.value{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.icon{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:14px;
+
+    background:#EFF6FF;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}

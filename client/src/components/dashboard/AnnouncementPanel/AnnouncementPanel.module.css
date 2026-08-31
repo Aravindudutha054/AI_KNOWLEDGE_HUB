@@ -1,0 +1,478 @@
+/* =========================================================
+   AnnouncementPanel.module.css
+   Part 1
+========================================================= */
+
+/* ========================================
+   Announcement List
+======================================== */
+
+.list{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ========================================
+   Announcement Item
+======================================== */
+
+.item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #EEF2F5;
+
+    transition:
+
+        all .25s ease;
+
+}
+
+.item:last-child{
+
+    border-bottom:none;
+
+}
+
+.item:hover{
+
+    padding-left:10px;
+
+}
+
+/* ========================================
+   Left Section
+======================================== */
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+/* ========================================
+   Announcement Icon
+======================================== */
+
+.icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    flex-shrink:0;
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.item:hover .icon{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+        0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.icon svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+/* ========================================
+   Content
+======================================== */
+
+.content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.content h4{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#162536;
+
+    margin-bottom:6px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+/* =========================================================
+   AnnouncementPanel.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Time
+======================================== */
+
+.content p{
+
+    font-size:13px;
+
+    color:#8A98A4;
+
+    line-height:1.6;
+
+}
+
+/* ========================================
+   View Button
+======================================== */
+
+.viewButton{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#F6F8FA;
+
+    color:#5F6E79;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+    transition:
+
+        all .25s ease;
+
+}
+
+/* ======================================== */
+
+.viewButton span{
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ======================================== */
+
+.viewButton svg{
+
+    transition:
+
+        transform .25s ease;
+
+}
+
+/* ========================================
+   Hover Effects
+======================================== */
+
+.item:hover .content h4{
+
+    color:#0B7D6E;
+
+}
+
+.item:hover .viewButton{
+
+    background:#0B7D6E;
+
+    color:#FFFFFF;
+
+}
+
+.item:hover .viewButton svg{
+
+    transform:translateX(4px);
+
+}
+
+.content h4,
+
+.viewButton{
+
+    transition:.25s ease;
+
+}
+
+/* ========================================
+   Focus State
+======================================== */
+
+.viewButton:focus-visible{
+
+    outline:none;
+
+    border-radius:12px;
+
+    box-shadow:
+
+        0 0 0 4px rgba(11,125,110,.10);
+
+}
+/* =========================================================
+   AnnouncementPanel.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width:992px){
+
+    .item{
+
+        gap:16px;
+
+    }
+
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width:768px){
+
+    .item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:16px;
+
+        padding:18px 0;
+
+    }
+
+    .left{
+
+        width:100%;
+
+    }
+
+    .content h4{
+
+        font-size:14px;
+
+    }
+
+    .content p{
+
+        font-size:12px;
+
+    }
+
+    .viewButton{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width:480px){
+
+    .icon{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .icon svg{
+
+        width:18px;
+
+        height:18px;
+
+    }
+
+    .viewButton{
+
+        padding:10px 14px;
+
+    }
+
+    .viewButton span{
+
+        font-size:12px;
+
+    }
+
+}
+
+/* ========================================
+   Entry Animation
+======================================== */
+
+.item{
+
+    animation:itemFade .45s ease;
+
+}
+
+@keyframes itemFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(16px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================================
+   Accessibility
+======================================== */
+
+.item:focus-within{
+
+    background:#FAFCFC;
+
+    border-radius:12px;
+
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   Skeleton Loading
+========================================== */
+
+.skeletonTitle{
+
+    width:170px;
+
+    height:16px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    margin-bottom:8px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonTime{
+
+    width:90px;
+
+    height:12px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.55;
+
+    }
+
+}

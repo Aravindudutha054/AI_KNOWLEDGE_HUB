@@ -1,0 +1,9 @@
+.gradient-text{
+
+background:var(--gradient-brand);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}

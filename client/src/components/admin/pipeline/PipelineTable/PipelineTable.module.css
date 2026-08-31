@@ -1,0 +1,49 @@
+.wrapper{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+
+}
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.table th{
+
+    background:#f8fafc;
+
+    text-align:left;
+
+    padding:16px;
+
+    font-size:14px;
+
+}
+
+.table td{
+
+    padding:16px;
+
+    border-top:1px solid #eef2f7;
+
+}
+
+.empty{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    padding:40px;
+
+}

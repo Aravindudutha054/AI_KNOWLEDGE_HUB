@@ -1,0 +1,105 @@
+.card {
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+}
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+}
+
+.header h3 {
+
+    margin: 0;
+
+    color: #0f172a;
+
+}
+
+.header span {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+.list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    transition: .2s;
+
+}
+
+.item:hover {
+
+    background: #f8fafc;
+
+}
+
+.left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #334155;
+
+    font-weight: 500;
+
+}
+
+.stats {
+
+    display: flex;
+
+    gap: 16px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+.stats span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}

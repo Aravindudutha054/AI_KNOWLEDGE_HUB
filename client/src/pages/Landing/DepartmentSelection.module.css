@@ -1,0 +1,792 @@
+/* =========================================================
+   DepartmentSelection.module.css
+   Part 1
+========================================================= */
+
+.page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F8FBFC 0%,
+            #F3F7F8 100%
+        );
+
+}
+
+/* ======================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 28px;
+
+    z-index:100;
+
+}
+
+/* ======================================== */
+
+.back{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(14px);
+
+    color:#324350;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:
+
+        0 10px 22px rgba(0,0,0,.05);
+
+}
+
+.back:hover{
+
+    transform:translateY(-2px);
+
+    background:#FFFFFF;
+
+}
+
+/* ======================================== */
+
+.content{
+
+    position:relative;
+
+    z-index:2;
+
+    padding-top:90px;
+
+    padding-bottom:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/* ======================================== */
+
+.logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    color:#0FB5A8;
+
+}
+
+.logo svg{
+
+    width:52px;
+
+    height:52px;
+
+}
+
+/* ======================================== */
+
+.badge{
+
+    margin-top:12px;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.22em;
+
+    color:#0B7D6E;
+
+    text-transform:uppercase;
+
+}
+
+/* ======================================== */
+
+.title{
+
+    margin-top:12px;
+
+    text-align:center;
+
+    font-size:clamp(
+        38px,
+        5vw,
+        52px
+    );
+
+    font-weight:800;
+
+    letter-spacing:-.04em;
+
+    color:#162536;
+
+}
+
+/* ======================================== */
+
+.subtitle{
+
+    margin:14px auto 42px;
+
+    max-width:520px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:#6A7882;
+
+}
+
+/* ======================================== */
+
+.grid{
+
+    width:100%;
+
+    max-width:820px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:22px;
+
+}
+/* =========================================================
+   DepartmentSelection.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Department Card
+======================================== */
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:165px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:
+
+        0 14px 36px rgba(0,0,0,.05);
+
+}
+
+.card:hover{
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(15,181,168,.28);
+
+    box-shadow:
+
+        0 24px 48px rgba(0,0,0,.09);
+
+}
+
+/* ======================================== */
+
+.cardGlow{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    transition:.35s;
+
+    background:
+
+        radial-gradient(
+
+            circle at center,
+
+            rgba(15,181,168,.08),
+
+            transparent 72%
+
+        );
+
+}
+
+.card:hover .cardGlow{
+
+    opacity:1;
+
+}
+
+/* ========================================
+   Icon
+======================================== */
+
+.iconContainer{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+/* ======================================== */
+
+.iconCircle{
+
+    position:relative;
+
+    width:66px;
+
+    height:66px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+        rgba(15,181,168,.08);
+
+    color:#0B7D6E;
+
+    transition:.35s;
+
+}
+
+.iconCircle::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    border:1px solid
+
+        rgba(15,181,168,.18);
+
+}
+
+.iconCircle::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:74px;
+
+    height:74px;
+
+    border-radius:50%;
+
+    border:2px solid
+
+        rgba(15,181,168,.30);
+
+    border-left-color:transparent;
+
+    border-bottom-color:transparent;
+
+    transform:rotate(45deg);
+
+    transition:.35s;
+
+}
+
+.card:hover .iconCircle{
+
+    transform:scale(1.08);
+
+    background:
+
+        rgba(15,181,168,.14);
+
+}
+
+.card:hover .iconCircle::after{
+
+    transform:rotate(225deg);
+
+}
+
+.iconCircle svg{
+
+    width:28px;
+
+    height:28px;
+
+}
+
+/* ========================================
+   Department Name
+======================================== */
+
+.department{
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:#233342;
+
+}
+
+/* ========================================
+   Small Label
+======================================== */
+
+.access{
+
+    font-size:11px;
+
+    color:#75828D;
+
+    letter-spacing:.04em;
+
+}
+
+/* =========================================================
+   DepartmentSelection.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Footer
+======================================== */
+
+.footer{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/* ======================================== */
+
+.stepper{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ======================================== */
+
+.step{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.step span{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    color:#6B7A86;
+
+}
+
+/* ======================================== */
+
+.completedStep,
+.activeStep,
+.pendingStep{
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+/* ======================================== */
+
+.completedStep{
+
+    background:#0B7D6E;
+
+    color:#FFFFFF;
+
+}
+
+/* ======================================== */
+
+.activeStep{
+
+    background:#162536;
+
+    color:#FFFFFF;
+
+    box-shadow:
+
+        0 8px 18px
+
+        rgba(22,37,54,.15);
+
+}
+
+/* ======================================== */
+
+.pendingStep{
+
+    background:#FFFFFF;
+
+    border:1px solid #D7E2E5;
+
+    color:#71808A;
+
+}
+
+/* ======================================== */
+
+.line{
+
+    width:34px;
+
+    height:2px;
+
+    background:#D7E2E5;
+
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width:1100px){
+
+    .grid{
+
+        max-width:600px;
+
+        grid-template-columns:
+
+            repeat(3,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .header{
+
+        padding:0 18px;
+
+    }
+
+    .content{
+
+        padding:
+
+            82px 18px 50px;
+
+    }
+
+    .title{
+
+        font-size:34px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+        margin-bottom:34px;
+
+    }
+
+    .grid{
+
+        max-width:420px;
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .card{
+
+        height:145px;
+
+    }
+
+    .iconCircle{
+
+        width:56px;
+
+        height:56px;
+
+    }
+
+    .iconCircle::before{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .iconCircle::after{
+
+        width:62px;
+
+        height:62px;
+
+    }
+
+    .iconCircle svg{
+
+        width:22px;
+
+        height:22px;
+
+    }
+
+    .department{
+
+        font-size:13px;
+
+    }
+
+    .access{
+
+        font-size:10px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+        max-width:240px;
+
+    }
+
+    .stepper{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .line{
+
+        width:2px;
+
+        height:18px;
+
+    }
+
+}
+
+/* ========================================
+   Animations
+======================================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.iconContainer{
+
+    animation:
+
+        float 5s ease-in-out infinite;
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.4;
+
+    }
+
+}
+
+.cardGlow{
+
+    animation:
+
+        pulseGlow 4s ease-in-out infinite;
+
+}
+
+.card:hover .cardGlow{
+
+    animation-duration:2s;
+
+}

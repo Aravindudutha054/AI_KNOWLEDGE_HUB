@@ -1,0 +1,75 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# ChromaDB
+vector_db/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
+
+# VS Code
+.vscode/
+python-ai/venv/
+python-ai/.venv/
+python-ai/vector_db/
+
+node_modules/
+.env
+__pycache__/
+*.pyc
+# OS
+.DS_Store
+Thumbs.db
+python-ai/vectordb/
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Python cache / ML
+.pytest_cache/
+*.egg-info/
+
+# Uploaded documents
+server/src/uploads/
+
+# Vector database
+python-ai/chroma/
+chroma_db/
+*.chroma/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+client/build/
+client/dist/
+
+# IDE
+.vscode/
+.idea/

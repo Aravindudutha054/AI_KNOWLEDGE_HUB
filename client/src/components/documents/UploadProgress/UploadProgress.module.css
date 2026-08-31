@@ -1,0 +1,147 @@
+.container{
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.title h3{
+
+    margin:0;
+
+    color:#0F172A;
+
+}
+
+.title p{
+
+    margin-top:4px;
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.loader{
+
+    color:#2563EB;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.success{
+
+    color:#10B981;
+
+}
+
+.percent{
+
+    font-weight:700;
+
+    color:#2563EB;
+
+}
+
+.progressBar{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#E2E8F0;
+
+}
+
+.progressFill{
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #2563EB,
+
+        #3B82F6
+
+    );
+
+    border-radius:999px;
+
+}
+
+.files{
+
+    margin-top:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.file{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#475569;
+
+    font-size:14px;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}

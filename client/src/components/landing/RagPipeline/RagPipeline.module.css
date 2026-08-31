@@ -1,0 +1,2738 @@
+/* =========================================================
+   RagPipeline.module.css
+   Part 1/6
+   Section • Background • Header • Overview Card
+========================================================= */
+
+.section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #F8FBFF 100%
+        );
+
+}
+
+/* ========================================= */
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top left,
+
+            rgba(0,194,168,.10),
+
+            transparent 45%
+
+        ),
+
+        radial-gradient(
+
+            circle at bottom right,
+
+            rgba(37,99,235,.08),
+
+            transparent 45%
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ========================================= */
+
+.section>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ========================================= */
+
+.pipelineWrapper{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+/* ========================================= */
+
+.overviewCard{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:950px;
+
+    padding:42px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.7);
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
+
+    box-shadow:
+
+        0 35px 90px rgba(15,23,42,.08);
+
+}
+
+/* ========================================= */
+
+.overviewCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.45),
+
+            transparent
+
+        );
+
+    pointer-events:none;
+
+}
+
+.overviewCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-120px;
+
+    top:-120px;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.16),
+
+            transparent 70%
+
+        );
+
+    filter:blur(60px);
+
+}
+
+/* ========================================= */
+
+.overviewHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+/* ========================================= */
+
+.liveBadge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.08);
+
+    color:#16A34A;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.liveDot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 14px rgba(34,197,94,.55);
+
+    animation:pulseLive 2s infinite;
+
+}
+
+/* ========================================= */
+
+.processing{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(99,102,241,.08);
+
+    color:#4F46E5;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.processing svg{
+
+    color:#8B5CF6;
+
+}
+
+/* ========================================= */
+
+.overviewCard h3{
+
+    font-size:36px;
+
+    font-weight:800;
+
+    color:#141B2B;
+
+    margin-bottom:18px;
+
+    letter-spacing:-1px;
+
+}
+
+.overviewCard p{
+
+    max-width:760px;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#64748B;
+
+}
+
+/* ========================================= */
+
+.legend{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:26px;
+
+    margin-top:34px;
+
+}
+
+.legend div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#475569;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+.legend span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.blue{
+
+    background:#2563EB;
+
+}
+
+.green{
+
+    background:#22C55E;
+
+}
+
+.purple{
+
+    background:#8B5CF6;
+
+}
+
+/* ========================================= */
+
+@keyframes pulseLive{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.4);
+
+opacity:.55;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* =========================================================
+   RagPipeline.module.css
+   Part 2/6
+   Pipeline • Nodes • Connectors • Data Flow
+========================================================= */
+
+.pipelineContainer{
+
+    position:relative;
+
+    margin-top:90px;
+
+}
+
+.pipeline{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:22px;
+
+}
+
+/* ========================================= */
+
+.pipelineItem{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/* ========================================= */
+
+.node{
+
+    position:relative;
+
+    width:165px;
+
+    min-height:190px;
+
+    padding:26px 20px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.92);
+
+    border:1px solid rgba(226,232,240,.85);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+    box-shadow:
+
+        0 22px 50px rgba(15,23,42,.06);
+
+}
+
+.node:hover{
+
+    transform:
+
+        translateY(-10px);
+
+    border-color:
+
+        rgba(0,194,168,.25);
+
+    box-shadow:
+
+        0 35px 75px rgba(15,23,42,.10);
+
+}
+
+/* ========================================= */
+
+.nodeGlow{
+
+    position:absolute;
+
+    top:-60px;
+
+    right:-60px;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    opacity:.18;
+
+    filter:blur(35px);
+
+}
+
+/* ========================================= */
+
+.iconWrapper{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    margin-bottom:20px;
+
+    box-shadow:
+
+        0 15px 35px rgba(15,23,42,.12);
+
+}
+
+.iconWrapper svg{
+
+    width:30px;
+
+    height:30px;
+
+}
+
+/* ========================================= */
+
+.node h4{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+    margin-bottom:10px;
+
+}
+
+.node p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:#64748B;
+
+}
+
+/* ========================================= */
+
+.status{
+
+    margin-top:18px;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.08);
+
+    color:#16A34A;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+/* ========================================= */
+
+.connectorWrapper{
+
+    position:relative;
+
+    width:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ========================================= */
+
+.connector{
+
+    width:100%;
+
+    height:3px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(0,194,168,.35),
+
+            rgba(37,99,235,.45)
+
+        );
+
+}
+
+/* ========================================= */
+
+.connector::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-30px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:26px;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:white;
+
+    animation:dataFlow 1.8s linear infinite;
+
+}
+
+/* ========================================= */
+
+.dataPacket{
+
+    position:absolute;
+
+    left:0;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    box-shadow:
+
+        0 0 18px rgba(37,99,235,.35);
+
+}
+
+/* ========================================= */
+
+.arrow{
+
+    position:absolute;
+
+    right:-10px;
+
+    color:#2563EB;
+
+}
+
+/* ========================================= */
+
+.connectionLineOne{
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(0,194,168,.18),
+
+            transparent
+
+        );
+
+}
+
+.connectionLineTwo{
+
+    position:absolute;
+
+    top:54%;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(37,99,235,.15),
+
+            transparent
+
+        );
+
+}
+
+/* ========================================= */
+
+@keyframes dataFlow{
+
+0%{
+
+left:-30px;
+
+}
+
+100%{
+
+left:110%;
+
+}
+
+}
+
+/* =========================================================
+   RagPipeline.module.css
+   Part 3/6
+   AI Response • Sources • Metrics • Timeline
+========================================================= */
+
+.resultSection{
+
+    margin-top:100px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+/* ========================================= */
+
+.responseCard{
+
+    position:relative;
+
+    padding:36px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+        0 30px 80px rgba(15,23,42,.08);
+
+}
+
+.responseCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.35),
+
+            transparent
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ========================================= */
+
+.responseHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.responseTitle{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+}
+
+.responseTitle svg{
+
+    color:#8B5CF6;
+
+}
+
+.secureBadge{
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.08);
+
+    color:#16A34A;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ========================================= */
+
+.question{
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:#EEF6FF;
+
+    color:#2563EB;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.answer{
+
+    color:#475569;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+/* ========================================= */
+
+.sources{
+
+    margin-top:30px;
+
+}
+
+.sources h5{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+    margin-bottom:18px;
+
+}
+
+.sourceList{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.source{
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+    color:#334155;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.source:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(0,194,168,.3);
+
+    background:white;
+
+}
+
+/* ========================================= */
+
+.retrievalGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.metricCard{
+
+    padding:28px 20px;
+
+    border-radius:24px;
+
+    background:white;
+
+    border:1px solid rgba(226,232,240,.85);
+
+    text-align:center;
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+    box-shadow:
+
+        0 18px 40px rgba(15,23,42,.05);
+
+}
+
+.metricCard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+        0 30px 70px rgba(15,23,42,.10);
+
+}
+
+.metricValue{
+
+    display:block;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#141B2B;
+
+}
+
+.metricLabel{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+/* ========================================= */
+
+.statusTimeline{
+
+    grid-column:1/-1;
+
+    margin-top:36px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.timelineItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+.timelineDot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 12px rgba(34,197,94,.45);
+
+    animation:timelinePulse 2s infinite;
+
+}
+
+/* ========================================= */
+
+@keyframes timelinePulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.35);
+
+opacity:.55;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* =========================================================
+   RagPipeline.module.css
+   Part 4/6
+   Analytics Panel • Activity Feed • Footer Banner
+========================================================= */
+
+/* =========================================
+   Bottom Section
+========================================= */
+
+.bottomSection{
+
+    position:relative;
+
+    margin-top:80px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:32px;
+
+}
+
+/* =========================================
+   Analytics Panel
+========================================= */
+
+.analyticsPanel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:32px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.90);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    box-shadow:
+
+        0 28px 70px rgba(15,23,42,.08);
+
+}
+
+.analyticsPanel::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100px;
+
+    right:-100px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.15),
+
+            transparent 70%
+
+        );
+
+    filter:blur(40px);
+
+}
+
+.analyticsHeader{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:26px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+}
+
+.analyticsHeader svg{
+
+    color:#00C2A8;
+
+}
+
+.analyticsList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.analyticsItem{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    background:#F8FAFC;
+
+    border:1px solid rgba(226,232,240,.8);
+
+    transition:
+
+        transform .3s ease,
+
+        border-color .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+.analyticsItem:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(0,194,168,.25);
+
+    box-shadow:
+
+        0 12px 30px rgba(15,23,42,.06);
+
+}
+
+.analyticsItem span{
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+.analyticsItem strong{
+
+    color:#141B2B;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* =========================================
+   Activity Panel
+========================================= */
+
+.activityPanel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:32px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.90);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    box-shadow:
+
+        0 28px 70px rgba(15,23,42,.08);
+
+}
+
+.activityPanel::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-90px;
+
+    left:-90px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(37,99,235,.12),
+
+            transparent 70%
+
+        );
+
+    filter:blur(45px);
+
+}
+
+.activityHeader{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+    margin-bottom:26px;
+
+}
+
+.activityFeed{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.feedItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    background:#F8FAFC;
+
+    border:1px solid rgba(226,232,240,.8);
+
+    color:#475569;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:
+
+        transform .3s ease,
+
+        border-color .3s ease;
+
+}
+
+.feedItem:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(37,99,235,.22);
+
+}
+
+.greenDot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 12px rgba(34,197,94,.45);
+
+    animation:feedPulse 2s infinite;
+
+}
+
+/* =========================================
+   Footer Banner
+========================================= */
+
+.footerBanner{
+
+    margin-top:80px;
+
+    padding:34px 40px;
+
+    border-radius:30px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #0F172A,
+
+            #1E3A8A,
+
+            #0EA5E9
+
+        );
+
+    color:white;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.footerBanner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.08),
+
+            transparent
+
+        );
+
+}
+
+.footerContent{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.footerContent h3{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.footerContent p{
+
+    color:rgba(255,255,255,.82);
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+.footerStatus{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(16px);
+
+    font-weight:700;
+
+}
+
+.footerDot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 14px rgba(34,197,94,.6);
+
+}
+
+/* =========================================
+   Keyframes
+========================================= */
+
+@keyframes feedPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.35);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* =========================================================
+   RagPipeline.module.css
+   Part 5/6
+   Mesh • SVG • Particles • Glow • Background Effects
+========================================================= */
+
+/* =========================================
+   Pipeline SVG
+========================================= */
+
+.pipelineSvg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:1;
+
+    opacity:.65;
+
+}
+
+/* =========================================
+   Animated Flow Particles
+========================================= */
+
+.flowParticle{
+
+    position:absolute;
+
+    top:205px;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    box-shadow:
+
+        0 0 20px rgba(37,99,235,.45);
+
+    z-index:5;
+
+}
+
+/* =========================================
+   Mesh Background
+========================================= */
+
+.meshOne{
+
+    position:absolute;
+
+    top:-220px;
+
+    left:-180px;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.16),
+
+            transparent 70%
+
+        );
+
+    filter:blur(90px);
+
+    animation:meshOneMove 18s ease-in-out infinite;
+
+}
+
+.meshTwo{
+
+    position:absolute;
+
+    right:-220px;
+
+    top:120px;
+
+    width:480px;
+
+    height:480px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(37,99,235,.15),
+
+            transparent 70%
+
+        );
+
+    filter:blur(100px);
+
+    animation:meshTwoMove 22s ease-in-out infinite;
+
+}
+
+.meshThree{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-260px;
+
+    transform:translateX(-50%);
+
+    width:620px;
+
+    height:620px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(139,92,246,.12),
+
+            transparent 72%
+
+        );
+
+    filter:blur(120px);
+
+    animation:meshThreeMove 24s ease-in-out infinite;
+
+}
+
+/* =========================================
+   Blur Circles
+========================================= */
+
+.blurCircleOne{
+
+    position:absolute;
+
+    top:8%;
+
+    right:10%;
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    animation:blurFloatOne 8s ease-in-out infinite;
+
+}
+
+.blurCircleTwo{
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:14%;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    animation:blurFloatTwo 10s ease-in-out infinite;
+
+}
+
+.blurCircleThree{
+
+    position:absolute;
+
+    right:24%;
+
+    bottom:8%;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    animation:blurFloatThree 9s ease-in-out infinite;
+
+}
+
+/* =========================================
+   Glow Effects
+========================================= */
+
+.glowOne{
+
+    position:absolute;
+
+    top:18%;
+
+    left:12%;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.18),
+
+            transparent
+
+        );
+
+    filter:blur(70px);
+
+}
+
+.glowTwo{
+
+    position:absolute;
+
+    right:14%;
+
+    top:30%;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(37,99,235,.15),
+
+            transparent
+
+        );
+
+    filter:blur(80px);
+
+}
+
+.glowThree{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:5%;
+
+    transform:translateX(-50%);
+
+    width:340px;
+
+    height:340px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(139,92,246,.12),
+
+            transparent
+
+        );
+
+    filter:blur(100px);
+
+}
+
+/* =========================================
+   Grid Overlay
+========================================= */
+
+.pipelineGrid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(15,23,42,.15) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(15,23,42,.15) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:48px 48px;
+
+}
+
+.pipelineBlur{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.08),
+
+            transparent 70%
+
+        );
+
+}
+
+/* =========================================
+   Floating Particles
+========================================= */
+
+.pipelineParticles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00C2A8;
+
+    opacity:.55;
+
+    animation:particleFloat 12s linear infinite;
+
+}
+
+.particle:nth-child(2n){
+
+    background:#2563EB;
+
+}
+
+.particle:nth-child(3n){
+
+    background:#8B5CF6;
+
+}
+
+/* =========================================
+   Animations
+========================================= */
+
+@keyframes meshOneMove{
+
+50%{transform:translate(80px,60px);}
+
+}
+
+@keyframes meshTwoMove{
+
+50%{transform:translate(-90px,70px);}
+
+}
+
+@keyframes meshThreeMove{
+
+50%{
+
+transform:translateX(-46%) translateY(-80px);
+
+}
+
+}
+
+@keyframes blurFloatOne{
+
+50%{
+
+transform:translateY(-16px);
+
+}
+
+}
+
+@keyframes blurFloatTwo{
+
+50%{
+
+transform:translateY(14px);
+
+}
+
+}
+
+@keyframes blurFloatThree{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+@keyframes particleFloat{
+
+0%{
+
+transform:translateY(120px) scale(.4);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.7;
+
+}
+
+100%{
+
+transform:translateY(-450px) translateX(40px);
+
+opacity:0;
+
+}
+
+}
+
+/* =========================================================
+   RagPipeline.module.css
+   Part 6/6
+   Responsive • Dark Mode • Reduced Motion • Utilities
+========================================================= */
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (max-width:1400px){
+
+.pipeline{
+
+gap:18px;
+
+}
+
+.node{
+
+width:150px;
+
+min-height:180px;
+
+}
+
+.overviewCard{
+
+max-width:900px;
+
+}
+
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width:1200px){
+
+.section{
+
+padding:120px 0;
+
+}
+
+.resultSection{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.bottomSection{
+
+grid-template-columns:1fr;
+
+gap:28px;
+
+}
+
+.pipeline{
+
+justify-content:center;
+
+}
+
+.footerContent{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:992px){
+
+.section{
+
+padding:100px 0;
+
+}
+
+.overviewCard{
+
+padding:32px;
+
+}
+
+.overviewHeader{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.overviewCard h3{
+
+font-size:30px;
+
+}
+
+.overviewCard p{
+
+font-size:16px;
+
+}
+
+.pipeline{
+
+gap:16px;
+
+}
+
+.node{
+
+width:140px;
+
+min-height:170px;
+
+padding:22px 18px;
+
+}
+
+.iconWrapper{
+
+width:60px;
+
+height:60px;
+
+}
+
+.retrievalGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.statusTimeline{
+
+justify-content:center;
+
+}
+
+.pipelineSvg{
+
+display:none;
+
+}
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+.section{
+
+padding:80px 0;
+
+}
+
+.pipeline{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.pipelineItem{
+
+flex-direction:column;
+
+}
+
+.connectorWrapper{
+
+width:2px;
+
+height:45px;
+
+}
+
+.connector{
+
+width:2px;
+
+height:100%;
+
+}
+
+.connector::before{
+
+left:50%;
+
+top:-22px;
+
+width:2px;
+
+height:22px;
+
+transform:translateX(-50%);
+
+animation:dataFlowVertical 1.6s linear infinite;
+
+}
+
+.arrow{
+
+right:auto;
+
+left:50%;
+
+bottom:-12px;
+
+transform:
+
+translateX(-50%)
+
+rotate(90deg);
+
+}
+
+.node{
+
+width:100%;
+
+max-width:300px;
+
+}
+
+.retrievalGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.metricCard{
+
+padding:24px;
+
+}
+
+.footerBanner{
+
+padding:28px;
+
+}
+
+.footerContent h3{
+
+font-size:24px;
+
+}
+
+.footerContent p{
+
+font-size:15px;
+
+}
+
+.footerStatus{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.legend{
+
+justify-content:center;
+
+}
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+.section{
+
+padding:70px 0;
+
+}
+
+.overviewCard{
+
+padding:24px;
+
+border-radius:22px;
+
+}
+
+.overviewCard h3{
+
+font-size:26px;
+
+}
+
+.overviewCard p{
+
+font-size:15px;
+
+}
+
+.node{
+
+padding:20px 16px;
+
+border-radius:22px;
+
+}
+
+.node h4{
+
+font-size:17px;
+
+}
+
+.node p{
+
+font-size:13px;
+
+}
+
+.iconWrapper{
+
+width:56px;
+
+height:56px;
+
+}
+
+.responseCard,
+
+.analyticsPanel,
+
+.activityPanel{
+
+padding:22px;
+
+border-radius:22px;
+
+}
+
+.question{
+
+font-size:14px;
+
+}
+
+.answer{
+
+font-size:15px;
+
+}
+
+.source{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.timelineItem{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.feedItem{
+
+font-size:14px;
+
+}
+
+.analyticsItem{
+
+padding:12px 14px;
+
+}
+
+.footerBanner{
+
+border-radius:24px;
+
+}
+
+.footerContent h3{
+
+font-size:22px;
+
+}
+
+.footerStatus{
+
+padding:12px 16px;
+
+}
+
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+[data-theme="dark"] .section{
+
+background:#020617;
+
+}
+
+[data-theme="dark"] .overviewCard,
+
+[data-theme="dark"] .node,
+
+[data-theme="dark"] .responseCard,
+
+[data-theme="dark"] .analyticsPanel,
+
+[data-theme="dark"] .activityPanel,
+
+[data-theme="dark"] .metricCard{
+
+background:rgba(15,23,42,.90);
+
+border-color:rgba(255,255,255,.08);
+
+color:#F8FAFC;
+
+}
+
+[data-theme="dark"] .overviewCard h3,
+
+[data-theme="dark"] .node h4,
+
+[data-theme="dark"] .responseTitle,
+
+[data-theme="dark"] .analyticsHeader,
+
+[data-theme="dark"] .activityHeader,
+
+[data-theme="dark"] .sources h5{
+
+color:#F8FAFC;
+
+}
+
+[data-theme="dark"] .overviewCard p,
+
+[data-theme="dark"] .node p,
+
+[data-theme="dark"] .answer,
+
+[data-theme="dark"] .analyticsItem span,
+
+[data-theme="dark"] .feedItem,
+
+[data-theme="dark"] .timelineItem,
+
+[data-theme="dark"] .metricLabel{
+
+color:#CBD5E1;
+
+}
+
+[data-theme="dark"] .question{
+
+background:#1E293B;
+
+color:#7DD3FC;
+
+}
+
+[data-theme="dark"] .source{
+
+background:#1E293B;
+
+border-color:rgba(255,255,255,.08);
+
+color:#E2E8F0;
+
+}
+
+[data-theme="dark"] .analyticsItem,
+
+[data-theme="dark"] .feedItem{
+
+background:#0F172A;
+
+border-color:rgba(255,255,255,.08);
+
+}
+
+[data-theme="dark"] .footerBanner{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#020617,
+
+#0F172A,
+
+#1E3A8A
+
+);
+
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+*,
+*::before,
+*::after{
+
+animation:none !important;
+
+transition:none !important;
+
+scroll-behavior:auto !important;
+
+}
+
+}
+
+/* =========================================
+   VERTICAL FLOW ANIMATION
+========================================= */
+
+@keyframes dataFlowVertical{
+
+0%{
+
+top:-22px;
+
+}
+
+100%{
+
+top:110%;
+
+}
+
+}
+
+/* =========================================
+   UTILITIES
+========================================= */
+
+.hidden{
+
+display:none !important;
+
+}
+
+.relative{
+
+position:relative;
+
+}
+
+.absolute{
+
+position:absolute;
+
+}
+
+.center{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.fullWidth{
+
+width:100%;
+
+}
+
+.textCenter{
+
+text-align:center;
+
+}
+
+.pointerNone{
+
+pointer-events:none;
+
+}
+
+.pointerAuto{
+
+pointer-events:auto;
+
+}
+
+.opacity0{
+
+opacity:0;
+
+}
+
+.opacity100{
+
+opacity:1;
+
+}

@@ -1,0 +1,2302 @@
+/* =========================================================
+   DepartmentIsolation.module.css
+   Part 1/6
+   Section • Header • Hero Card • AI Hub
+========================================================= */
+
+.section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #F8FBFF 100%
+        );
+
+}
+
+/* ========================================= */
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(0,194,168,.08),
+            transparent 45%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(37,99,235,.08),
+            transparent 45%
+        );
+
+    pointer-events:none;
+
+}
+
+/* ========================================= */
+
+.section>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ========================================= */
+
+.introCard{
+
+    margin-top:70px;
+
+}
+
+/* ========================================= */
+
+.heroCard{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:46px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.86);
+
+    backdrop-filter:blur(24px);
+
+    -webkit-backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+
+        0 35px 90px rgba(15,23,42,.08);
+
+}
+
+/* ========================================= */
+
+.heroCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.35),
+
+            transparent
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ========================================= */
+
+.heroTop{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:36px;
+
+}
+
+/* ========================================= */
+
+.liveStatus{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.08);
+
+    color:#16A34A;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.liveDot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 14px rgba(34,197,94,.55);
+
+    animation:livePulse 2s infinite;
+
+}
+
+/* ========================================= */
+
+.secureBadge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.08);
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ========================================= */
+
+.heroContent{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+/* ========================================= */
+
+.left h3{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    letter-spacing:-1px;
+
+    color:#141B2B;
+
+    margin-bottom:22px;
+
+}
+
+.left p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#64748B;
+
+    max-width:650px;
+
+}
+
+/* ========================================= */
+
+.featureGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:36px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    background:#F8FAFC;
+
+    border:1px solid rgba(226,232,240,.8);
+
+    color:#334155;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(0,194,168,.25);
+
+}
+
+.feature svg{
+
+    color:#00C2A8;
+
+}
+
+/* ========================================= */
+
+.aiHub{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.aiCore{
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #2563EB,
+
+            #00C2A8
+
+        );
+
+    box-shadow:
+
+        0 25px 60px rgba(37,99,235,.25);
+
+    animation:coreFloat 5s ease-in-out infinite;
+
+}
+
+.aiHub h4{
+
+    margin-top:24px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#141B2B;
+
+}
+
+.aiHub p{
+
+    margin-top:10px;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/* ========================================= */
+
+@keyframes livePulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.35);
+
+opacity:.55;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes coreFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-14px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+/* =========================================================
+   DepartmentIsolation.module.css
+   Part 2/6
+   Department Grid • Cards • Status • Connections
+========================================================= */
+
+/* =========================================
+   Department Grid
+========================================= */
+
+.departmentGrid{
+
+    position:relative;
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+/* ========================================= */
+
+.departmentItem{
+
+    position:relative;
+
+}
+
+/* ========================================= */
+
+.departmentCard{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:260px;
+
+    padding:28px 24px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+    box-shadow:
+
+        0 24px 60px rgba(15,23,42,.07);
+
+}
+
+.departmentCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,194,168,.25);
+
+    box-shadow:
+
+        0 35px 80px rgba(15,23,42,.12);
+
+}
+
+/* ========================================= */
+
+.departmentGlow{
+
+    position:absolute;
+
+    top:-70px;
+
+    right:-70px;
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    opacity:.18;
+
+    filter:blur(45px);
+
+}
+
+/* ========================================= */
+
+.departmentIcon{
+
+    width:78px;
+
+    height:78px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    margin-bottom:22px;
+
+    box-shadow:
+
+        0 18px 45px rgba(15,23,42,.12);
+
+}
+
+.departmentIcon svg{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+/* ========================================= */
+
+.departmentBody{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.departmentBody h3{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:#141B2B;
+
+    letter-spacing:.04em;
+
+    margin-bottom:10px;
+
+}
+
+.departmentBody p{
+
+    font-size:14px;
+
+    color:#64748B;
+
+    line-height:1.6;
+
+}
+
+/* ========================================= */
+
+.departmentStatus{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:22px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.08);
+
+    color:#16A34A;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+/* ========================================= */
+
+.statusDot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 10px rgba(34,197,94,.55);
+
+    animation:statusPulse 2s infinite;
+
+}
+
+/* ========================================= */
+
+.databaseCard{
+
+    margin-top:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 16px;
+
+    border-radius:16px;
+
+    background:#F8FAFC;
+
+    border:1px solid rgba(226,232,240,.85);
+
+    color:#475569;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.databaseCard svg{
+
+    color:#2563EB;
+
+}
+
+/* =========================================
+   Connection Wrapper
+========================================= */
+
+.connectionWrapper{
+
+    position:relative;
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+}
+
+/* ========================================= */
+
+.connection{
+
+    position:relative;
+
+    flex:1;
+
+    height:3px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(0,194,168,.18),
+
+            rgba(37,99,235,.18)
+
+        );
+
+    transform-origin:left;
+
+}
+
+/* ========================================= */
+
+.connectionPulse{
+
+    position:absolute;
+
+    left:-40px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:40px;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    box-shadow:
+
+        0 0 18px rgba(37,99,235,.35);
+
+}
+
+/* ========================================= */
+
+@keyframes statusPulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.4);
+
+opacity:.45;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+/* =========================================================
+   DepartmentIsolation.module.css
+   Part 3/6
+   Security Hub • AI Core • Data Flow • Info Cards
+========================================================= */
+
+/* =========================================
+   Security Section
+========================================= */
+
+.securitySection{
+
+    position:relative;
+
+    margin-top:90px;
+
+}
+
+/* =========================================
+   Security Hub
+========================================= */
+
+.securityHub{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ========================================= */
+
+.centerCard{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    max-width:620px;
+
+    padding:46px;
+
+    border-radius:34px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+        0 35px 90px rgba(15,23,42,.08);
+
+}
+
+/* ========================================= */
+
+.centerGlow{
+
+    position:absolute;
+
+    top:-90px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.20),
+
+            transparent 72%
+
+        );
+
+    filter:blur(60px);
+
+}
+
+/* ========================================= */
+
+.centerIcon{
+
+    position:relative;
+
+    width:120px;
+
+    height:120px;
+
+    margin:0 auto 28px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    box-shadow:
+
+        0 28px 60px rgba(37,99,235,.25);
+
+    animation:centerFloat 5s ease-in-out infinite;
+
+}
+
+.centerIcon svg{
+
+    width:52px;
+
+    height:52px;
+
+}
+
+/* ========================================= */
+
+.centerCard h3{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#141B2B;
+
+    margin-bottom:18px;
+
+}
+
+.centerCard p{
+
+    max-width:470px;
+
+    margin:0 auto;
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+/* ========================================= */
+
+.securityBadges{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin-top:34px;
+
+}
+
+.securityBadge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:#F8FAFC;
+
+    border:1px solid rgba(226,232,240,.85);
+
+    color:#334155;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease;
+
+}
+
+.securityBadge:hover{
+
+    transform:translateY(-5px);
+
+    border-color:rgba(0,194,168,.25);
+
+}
+
+.securityBadge svg{
+
+    color:#00C2A8;
+
+}
+
+/* =========================================
+   Data Flow
+========================================= */
+
+.dataFlow{
+
+    width:100%;
+
+    margin-top:55px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.dataLine{
+
+    position:relative;
+
+    height:4px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(0,194,168,.15),
+
+            rgba(37,99,235,.15)
+
+        );
+
+}
+
+.dataPacket{
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:16px;
+
+    height:16px;
+
+    transform:translateY(-50%);
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    box-shadow:
+
+        0 0 18px rgba(37,99,235,.35);
+
+}
+
+/* =========================================
+   Information Cards
+========================================= */
+
+.infoGrid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+.infoCard{
+
+    padding:34px 28px;
+
+    border-radius:26px;
+
+    background:rgba(255,255,255,.90);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+
+        0 24px 60px rgba(15,23,42,.06);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+}
+
+.infoCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,194,168,.25);
+
+    box-shadow:
+
+        0 35px 80px rgba(15,23,42,.10);
+
+}
+
+.infoIcon{
+
+    color:#2563EB;
+
+    margin-bottom:20px;
+
+}
+
+.infoCard h4{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+    margin-bottom:14px;
+
+}
+
+.infoCard p{
+
+    color:#64748B;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* ========================================= */
+
+@keyframes centerFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================================================
+   DepartmentIsolation.module.css
+   Part 4/6
+   Metrics • Activity Panel • Security Statistics
+========================================================= */
+
+/* =========================================
+   Metrics Section
+========================================= */
+
+.metricsSection{
+
+    position:relative;
+
+    margin-top:90px;
+
+}
+
+/* ========================================= */
+
+.metricsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:50px;
+
+}
+
+/* ========================================= */
+
+.metricCard{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:32px 24px;
+
+    border-radius:26px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+        0 24px 60px rgba(15,23,42,.06);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+}
+
+.metricCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(0,194,168,.22);
+
+    box-shadow:
+
+        0 35px 80px rgba(15,23,42,.10);
+
+}
+
+.metricCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(0,194,168,.08),
+
+            transparent
+
+        );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.metricCard:hover::before{
+
+    opacity:1;
+
+}
+
+/* ========================================= */
+
+.metricValue{
+
+    display:block;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#141B2B;
+
+    letter-spacing:-1px;
+
+}
+
+.metricLabel{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#64748B;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+}
+
+/* =========================================
+   Activity Panel
+========================================= */
+
+.activityPanel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:36px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+        0 30px 80px rgba(15,23,42,.08);
+
+}
+
+.activityPanel::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-120px;
+
+    top:-120px;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(37,99,235,.15),
+
+            transparent 70%
+
+        );
+
+    filter:blur(60px);
+
+}
+
+/* ========================================= */
+
+.activityHeader{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:30px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#141B2B;
+
+}
+
+.activityHeader svg{
+
+    color:#00C2A8;
+
+}
+
+/* ========================================= */
+
+.activityList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ========================================= */
+
+.activityItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:16px 20px;
+
+    border-radius:18px;
+
+    background:#F8FAFC;
+
+    border:1px solid rgba(226,232,240,.85);
+
+    color:#475569;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:
+
+        transform .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.activityItem:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(0,194,168,.25);
+
+    box-shadow:
+
+        0 15px 35px rgba(15,23,42,.06);
+
+}
+
+/* ========================================= */
+
+.activityDot{
+
+    width:10px;
+
+    height:10px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 14px rgba(34,197,94,.55);
+
+    animation:activityPulse 2s infinite;
+
+}
+
+/* =========================================
+   Security Progress
+========================================= */
+
+.progressSection{
+
+    margin-top:45px;
+
+}
+
+.progressRow{
+
+    margin-bottom:20px;
+
+}
+
+.progressLabel{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    color:#475569;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.progressTrack{
+
+    position:relative;
+
+    width:100%;
+
+    height:8px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:#E2E8F0;
+
+}
+
+.progressFill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    animation:progressMove 2.5s ease;
+
+}
+
+/* ========================================= */
+
+@keyframes activityPulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.45);
+
+opacity:.45;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes progressMove{
+
+0%{
+
+width:0;
+
+}
+
+100%{
+
+width:100%;
+
+}
+
+}
+/* =========================================================
+   DepartmentIsolation.module.css
+   Part 5/6
+   Mesh • Glow • SVG • Particles • Background Effects
+========================================================= */
+
+/* =========================================
+   Footer Section
+========================================= */
+
+.footerSection{
+
+    position:relative;
+
+    margin-top:90px;
+
+}
+
+/* =========================================
+   Footer Banner
+========================================= */
+
+.footerBanner{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:42px;
+
+    border-radius:34px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #0F172A,
+
+            #1E3A8A,
+
+            #0EA5E9
+
+        );
+
+    color:#fff;
+
+    box-shadow:
+
+        0 35px 90px rgba(15,23,42,.18);
+
+}
+
+.footerBanner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(255,255,255,.10),
+
+            transparent
+
+        );
+
+}
+
+.footerContent{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:32px;
+
+}
+
+.footerContent h3{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+.footerContent p{
+
+    max-width:620px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.82);
+
+}
+
+.systemStatus{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(16px);
+
+    font-weight:700;
+
+}
+
+.systemDot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+
+        0 0 16px rgba(34,197,94,.65);
+
+}
+
+/* =========================================
+   SVG
+========================================= */
+
+.securitySvg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    opacity:.55;
+
+}
+
+/* =========================================
+   Flow Particles
+========================================= */
+
+.flowParticle{
+
+    position:absolute;
+
+    top:52%;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #00C2A8,
+
+            #2563EB
+
+        );
+
+    box-shadow:
+
+        0 0 22px rgba(37,99,235,.45);
+
+    z-index:3;
+
+}
+
+/* =========================================
+   Mesh Background
+========================================= */
+
+.meshOne{
+
+    position:absolute;
+
+    top:-220px;
+
+    left:-220px;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.18),
+
+            transparent 72%
+
+        );
+
+    filter:blur(90px);
+
+    animation:meshOneMove 18s ease-in-out infinite;
+
+}
+
+.meshTwo{
+
+    position:absolute;
+
+    top:15%;
+
+    right:-220px;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(37,99,235,.16),
+
+            transparent 72%
+
+        );
+
+    filter:blur(100px);
+
+    animation:meshTwoMove 20s ease-in-out infinite;
+
+}
+
+.meshThree{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-260px;
+
+    transform:translateX(-50%);
+
+    width:620px;
+
+    height:620px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(139,92,246,.14),
+
+            transparent 72%
+
+        );
+
+    filter:blur(120px);
+
+    animation:meshThreeMove 24s ease-in-out infinite;
+
+}
+
+/* =========================================
+   Blur Circles
+========================================= */
+
+.blurCircleOne{
+
+    position:absolute;
+
+    top:8%;
+
+    right:12%;
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    animation:blurFloatOne 8s ease-in-out infinite;
+
+}
+
+.blurCircleTwo{
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:16%;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    animation:blurFloatTwo 10s ease-in-out infinite;
+
+}
+
+.blurCircleThree{
+
+    position:absolute;
+
+    right:24%;
+
+    bottom:10%;
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    animation:blurFloatThree 9s ease-in-out infinite;
+
+}
+
+/* =========================================
+   Glow Effects
+========================================= */
+
+.glowOne{
+
+    position:absolute;
+
+    top:10%;
+
+    left:8%;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(0,194,168,.20),
+
+            transparent
+
+        );
+
+    filter:blur(80px);
+
+}
+
+.glowTwo{
+
+    position:absolute;
+
+    top:35%;
+
+    right:10%;
+
+    width:340px;
+
+    height:340px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(37,99,235,.16),
+
+            transparent
+
+        );
+
+    filter:blur(90px);
+
+}
+
+.glowThree{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:4%;
+
+    transform:translateX(-50%);
+
+    width:380px;
+
+    height:380px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(139,92,246,.14),
+
+            transparent
+
+        );
+
+    filter:blur(110px);
+
+}
+
+/* =========================================
+   Background Overlay
+========================================= */
+
+.gridOverlay{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(15,23,42,.12) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(15,23,42,.12) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:42px 42px;
+
+}
+
+.blurLayer{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(255,255,255,.08),
+
+            transparent 72%
+
+        );
+
+}
+
+/* =========================================
+   Floating Particles
+========================================= */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#00C2A8;
+
+    opacity:.55;
+
+    animation:particleFloat 12s linear infinite;
+
+}
+
+.particle:nth-child(2n){
+
+    background:#2563EB;
+
+}
+
+.particle:nth-child(3n){
+
+    background:#8B5CF6;
+
+}
+
+/* =========================================
+   Animations
+========================================= */
+
+@keyframes meshOneMove{
+
+50%{transform:translate(70px,50px);}
+
+}
+
+@keyframes meshTwoMove{
+
+50%{transform:translate(-80px,60px);}
+
+}
+
+@keyframes meshThreeMove{
+
+50%{
+
+transform:translateX(-46%) translateY(-80px);
+
+}
+
+}
+
+@keyframes blurFloatOne{
+
+50%{
+
+transform:translateY(-16px);
+
+}
+
+}
+
+@keyframes blurFloatTwo{
+
+50%{
+
+transform:translateY(14px);
+
+}
+
+}
+
+@keyframes blurFloatThree{
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+@keyframes particleFloat{
+
+0%{
+
+transform:translateY(120px) scale(.4);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.7;
+
+}
+
+100%{
+
+transform:translateY(-420px) translateX(40px);
+
+opacity:0;
+
+}
+
+}
+

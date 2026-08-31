@@ -1,0 +1,43 @@
+.toolbar{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:24px;
+
+}
+
+.search{
+
+    flex:1;
+
+    min-width:280px;
+
+    padding:10px 14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+}
+
+.select{
+
+    width:180px;
+
+    padding:10px 14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    font-size:14px;
+
+}

@@ -1,0 +1,59 @@
+.card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+
+}
+
+.header{
+
+    margin-bottom:20px;
+
+}
+
+.header h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    text-align:left;
+
+    padding-bottom:14px;
+
+    color:#64748b;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+td{
+
+    padding:14px 0;
+
+    border-top:1px solid #edf2f7;
+
+    font-size:14px;
+
+}

@@ -1,0 +1,29 @@
+.container{
+
+    padding:32px;
+
+    background:#f8fafc;
+
+    min-height:100vh;
+
+}
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+    align-items:start;
+
+}
+@media(max-width:1200px){
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

@@ -1,0 +1,60 @@
+.card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    transition: .25s;
+}
+
+.card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 12px 32px rgba(15,23,42,.08);
+}
+
+.icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+}
+
+.title {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.positive {
+    display: inline-block;
+    margin-top: 8px;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.negative {
+    display: inline-block;
+    margin-top: 8px;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 600;
+}

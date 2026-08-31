@@ -1,0 +1,43 @@
+.section-header{
+
+    margin:0 auto 72px;
+
+}
+
+.section-header-center{
+
+    text-align:center;
+
+}
+
+.section-header-left{
+
+    text-align:left;
+
+}
+
+.section-title{
+
+    margin-top:18px;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:var(--color-text-primary);
+
+    line-height:1.15;
+
+}
+
+.section-description{
+
+    margin-top:18px;
+
+    color:var(--color-text-secondary);
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}

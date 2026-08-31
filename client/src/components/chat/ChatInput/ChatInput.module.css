@@ -1,0 +1,77 @@
+.container{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:16px;
+
+    padding:24px;
+
+    background:white;
+
+    border-top:1px solid #E5E7EB;
+
+}
+
+.container textarea{
+
+    flex:1;
+
+    resize:none;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    font-size:15px;
+
+    outline:none;
+
+    min-height:58px;
+
+    max-height:160px;
+
+    transition:.2s;
+
+}
+
+.container textarea:focus{
+
+    border-color:#2563EB;
+
+}
+
+.container button{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#2563EB;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.container button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}

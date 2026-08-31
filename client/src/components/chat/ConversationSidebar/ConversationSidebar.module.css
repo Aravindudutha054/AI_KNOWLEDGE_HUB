@@ -1,0 +1,93 @@
+.sidebar{
+
+    width:280px;
+
+    background:white;
+
+    border-right:1px solid #E5E7EB;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.newButton{
+
+    margin:20px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563EB;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+}
+
+.list{
+
+    overflow:auto;
+
+    padding:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.item{
+
+    border:none;
+
+    background:none;
+
+    text-align:left;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.item:hover{
+
+    background:#F3F4F6;
+
+}
+
+.active{
+
+    border:none;
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+    text-align:left;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}

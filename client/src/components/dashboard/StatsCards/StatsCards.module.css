@@ -1,0 +1,603 @@
+/* =========================================================
+   StatsCards.module.css
+   Part 1
+========================================================= */
+
+/* ========================================
+   Grid
+======================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+/* ========================================
+   Card
+======================================== */
+
+.card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E7ECEF;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease,
+
+        border-color .25s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#D7E2E5;
+
+    box-shadow:
+
+        0 14px 30px rgba(0,0,0,.05);
+
+}
+
+/* ========================================
+   Header
+======================================== */
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+/* ========================================
+   Icon
+======================================== */
+
+.icon{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:rgba(11,125,110,.08);
+
+    color:#0B7D6E;
+
+}
+
+.icon svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+/* ========================================
+   Title
+======================================== */
+
+.header span{
+
+    flex:1;
+
+    margin-left:14px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#5F6E79;
+
+}
+
+/* =========================================================
+   StatsCards.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Body
+======================================== */
+
+.body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    margin-bottom:18px;
+
+}
+
+/* ======================================== */
+
+.body h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:#162536;
+
+}
+
+/* ======================================== */
+
+.body p{
+
+    font-size:13px;
+
+    font-weight:500;
+
+    color:#0B7D6E;
+
+}
+
+/* ========================================
+   Progress
+======================================== */
+
+.progress{
+
+    position:relative;
+
+    width:100%;
+
+    height:8px;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:#EDF2F4;
+
+}
+
+/* ======================================== */
+
+.progressFill{
+
+    position:relative;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #0B7D6E,
+
+            #17A08D
+
+        );
+
+    transition:width .6s ease;
+
+}
+
+/* ======================================== */
+
+.progressFill::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.55),
+
+            transparent
+
+        );
+
+    animation:
+
+        shimmer 2.5s linear infinite;
+
+}
+
+/* ========================================
+   Footer
+======================================== */
+
+.footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding-top:14px;
+
+    border-top:1px solid #EEF2F5;
+
+}
+
+/* ======================================== */
+
+.footer span{
+
+    font-size:12px;
+
+    color:#8A98A4;
+
+    font-weight:500;
+
+}
+
+/* ========================================
+   Card Hover
+======================================== */
+
+.card:hover .icon{
+
+    transform:scale(1.08);
+
+    background:
+
+        rgba(11,125,110,.12);
+
+}
+
+.icon{
+
+    transition:
+
+        transform .25s ease,
+
+        background .25s ease;
+
+}
+
+/* =========================================================
+   StatsCards.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width:1200px){
+
+    .grid{
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+    }
+
+}
+
+/* ======================================== */
+
+@media (max-width:768px){
+
+    .grid{
+
+        gap:16px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+        border-radius:16px;
+
+    }
+
+    .header{
+
+        margin-bottom:16px;
+
+    }
+
+    .icon{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .icon svg{
+
+        width:18px;
+
+        height:18px;
+
+    }
+
+    .header span{
+
+        font-size:13px;
+
+    }
+
+    .body h2{
+
+        font-size:28px;
+
+    }
+
+    .body p{
+
+        font-size:12px;
+
+    }
+
+}
+
+/* ======================================== */
+
+@media (max-width:480px){
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        padding:16px;
+
+    }
+
+    .header{
+
+        gap:10px;
+
+    }
+
+    .body{
+
+        margin-bottom:16px;
+
+    }
+
+    .body h2{
+
+        font-size:26px;
+
+    }
+
+    .progress{
+
+        height:7px;
+
+    }
+
+    .footer{
+
+        padding-top:12px;
+
+    }
+
+    .footer span{
+
+        font-size:11px;
+
+    }
+
+}
+
+/* ========================================
+   Animations
+======================================== */
+
+@keyframes shimmer{
+
+    0%{
+
+        transform:translateX(-100%);
+
+    }
+
+    100%{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+.card{
+
+    animation:
+
+        cardFade .45s ease;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================================
+   Focus States
+======================================== */
+
+.card:focus-within{
+
+    border-color:#0B7D6E;
+
+    box-shadow:
+
+        0 0 0 4px rgba(11,125,110,.08);
+
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+
+/* =======================================
+   Skeleton Loading
+======================================= */
+
+.skeletonHeader{
+
+    width:60%;
+
+    height:18px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    margin-bottom:22px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonValue{
+
+    width:40%;
+
+    height:34px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    margin-bottom:14px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonText{
+
+    width:70%;
+
+    height:16px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    margin-bottom:20px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonProgress{
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.55;
+
+    }
+
+}

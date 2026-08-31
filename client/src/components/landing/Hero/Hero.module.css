@@ -1,0 +1,773 @@
+/* =========================================================
+   Hero.module.css
+   Part 1
+   Enterprise Hero
+========================================================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:90px 24px 40px;
+    background:
+        linear-gradient(
+            180deg,
+            #F5F8F9 0%,
+            #EEF3F5 100%
+        );
+}
+
+/* ========================= */
+
+.background{
+
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+
+}
+
+/* ========================= */
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:720px;
+    height:720px;
+
+    top:-260px;
+    left:-220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(16,183,168,.10),
+
+            transparent 72%
+
+        );
+
+    filter:blur(80px);
+
+}
+
+/* ========================= */
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:620px;
+    height:620px;
+
+    right:-180px;
+    bottom:-220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(16,183,168,.08),
+
+            transparent 72%
+
+        );
+
+    filter:blur(80px);
+
+}
+
+/* ========================= */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:1480px;
+
+    margin:auto;
+
+}
+
+/* ========================= */
+
+.content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+/* ========================= */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:11px 22px;
+
+    border-radius:999px;
+
+    background:#13B8AA;
+
+    color:#063A37;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+}
+
+/* ========================= */
+
+.title{
+
+    margin-top:24px;
+
+    font-size:clamp(
+         42px,
+        6vw,
+        62px
+    );
+
+    font-weight:800;
+
+    line-height:1.08;
+
+    letter-spacing:-0.05em;
+
+    color:#18253D;
+
+    max-width:980px;
+
+}
+
+/* ========================= */
+
+.description{
+
+    margin-top:22px;
+
+    max-width:700px;
+
+    font-size:18px;
+    line-height:1.8;
+
+    color:#596673;
+
+}
+
+/* ========================= */
+
+.button{
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:20px 44px;
+
+    border:none;
+
+    border-radius:34px;
+
+    background:#0A7A6C;
+
+    color:#FFFFFF;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 18px 40px
+
+        rgba(10,122,108,.20);
+
+}
+
+.button:hover{
+
+    background:#086A5D;
+
+    transform:translateY(-3px);
+
+}
+
+/* ========================= */
+
+.pipeline{
+
+    margin-top:110px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:nowrap;
+
+    position:relative;
+
+}
+
+/* ========================= */
+
+.pipelineItem{
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* ========================= */
+
+.icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#FFFFFF;
+
+    border:1px solid #DDE5E8;
+
+    box-shadow:
+
+        0 12px 28px
+
+        rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.icon:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        0 18px 36px
+
+        rgba(0,0,0,.08);
+
+}
+
+/* ========================= */
+
+.pipelineItem span{
+
+    position:absolute;
+
+    width:90px;
+
+    margin-top:96px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#56636F;
+
+}
+/* =========================================================
+   Hero.module.css
+   Part 2
+========================================================= */
+
+/* ==========================
+   Pipeline Connector
+========================== */
+
+.connector{
+
+    width:78px;
+
+    height:2px;
+
+    margin:0 10px;
+
+    border-radius:999px;
+
+    background:#7ED9D0;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.connector::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.9),
+
+            transparent
+
+        );
+
+    animation:
+
+        connectorFlow 2.8s linear infinite;
+
+}
+
+/* ==========================
+   Data Packets
+========================== */
+
+.packetLayer{
+
+    position:absolute;
+
+    left:6%;
+
+    right:6%;
+
+    top:58%;
+
+    height:12px;
+
+    pointer-events:none;
+
+}
+
+.packet{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#13B8AA;
+
+    box-shadow:
+
+        0 0 10px rgba(19,184,170,.45);
+
+}
+
+/* ==========================
+   Background Glow
+========================== */
+
+.glowOne,
+.glowTwo,
+.glowThree{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    filter:blur(90px);
+
+}
+
+.glowOne{
+
+    width:260px;
+
+    height:260px;
+
+    left:8%;
+
+    top:12%;
+
+    background:
+
+        rgba(19,184,170,.10);
+
+}
+
+.glowTwo{
+
+    width:300px;
+
+    height:300px;
+
+    right:10%;
+
+    bottom:12%;
+
+    background:
+
+        rgba(19,184,170,.08);
+
+}
+
+.glowThree{
+
+    width:200px;
+
+    height:200px;
+
+    left:50%;
+
+    top:48%;
+
+    transform:translateX(-50%);
+
+    background:
+
+        rgba(19,184,170,.06);
+
+}
+
+/* ==========================
+   Status Cards
+========================== */
+
+.statusBar{
+
+    margin-top:110px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.statusItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    border:1px solid #DDE5E8;
+
+    box-shadow:
+
+        0 10px 24px rgba(0,0,0,.04);
+
+    color:#495560;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#0A7A6C;
+
+    animation:pulse 2.4s infinite;
+
+}
+
+/* ==========================
+   Bottom Fade
+========================== */
+
+.bottomFade{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:180px;
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            #F5F8F9
+
+        );
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:1200px){
+
+    .pipeline{
+
+        transform:scale(.9);
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .hero{
+
+        padding-top:110px;
+
+    }
+
+    .pipeline{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:28px;
+
+        transform:none;
+
+    }
+
+    .pipelineItem{
+
+        flex-direction:column;
+
+    }
+
+    .connector{
+
+        display:none;
+
+    }
+
+    .pipelineItem span{
+
+        position:static;
+
+        margin-top:12px;
+
+        width:auto;
+
+    }
+
+    .statusBar{
+
+        margin-top:70px;
+
+        gap:16px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding:100px 20px 70px;
+
+    }
+
+    .title{
+
+        font-size:48px;
+
+    }
+
+    .description{
+
+        font-size:17px;
+
+    }
+
+    .button{
+
+        width:100%;
+
+        max-width:320px;
+
+        justify-content:center;
+
+        font-size:18px;
+
+    }
+
+    .icon{
+
+        width:56px;
+
+        height:56px;
+
+        border-radius:12px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .title{
+
+        font-size:38px;
+
+    }
+
+    .badge{
+
+        font-size:11px;
+
+        padding:9px 18px;
+
+    }
+
+    .description{
+
+        font-size:15px;
+
+    }
+
+    .statusItem{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================
+   Animations
+========================== */
+
+@keyframes connectorFlow{
+
+    0%{
+
+        transform:translateX(-100%);
+
+    }
+
+    100%{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.45;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.35);
+
+    }
+
+    100%{
+
+        opacity:.45;
+
+        transform:scale(1);
+
+    }
+
+}

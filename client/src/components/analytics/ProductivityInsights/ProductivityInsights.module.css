@@ -1,0 +1,39 @@
+.card{
+
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:18px;
+    padding:24px;
+
+}
+
+.card h3{
+
+    margin:0 0 20px;
+
+}
+
+.list{
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+
+}
+
+.item{
+
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    color:#334155;
+
+}
+
+.item svg{
+
+    color:#10b981;
+    flex-shrink:0;
+    margin-top:2px;
+
+}

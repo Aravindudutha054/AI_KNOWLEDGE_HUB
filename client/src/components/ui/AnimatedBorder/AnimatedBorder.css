@@ -1,0 +1,37 @@
+.animated-border{
+
+padding:1px;
+
+border-radius:28px;
+
+background:var(--gradient-brand);
+
+background-size:300%;
+
+animation:borderGradient 6s linear infinite;
+
+}
+
+.animated-border-inner{
+
+background:white;
+
+border-radius:27px;
+
+}
+
+@keyframes borderGradient{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:300%;
+
+}
+
+}

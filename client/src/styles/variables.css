@@ -1,0 +1,107 @@
+:root {
+  /* ===============================
+     COLORS
+  =============================== */
+
+  --color-primary: #00c2a8;
+  --color-primary-dark: #00a38d;
+  --color-primary-light: #ecfefb;
+
+  --color-secondary: #2563eb;
+
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f4f7fb;
+
+  --color-text-primary: #141b2b;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
+  --color-text-white: #ffffff;
+
+  --color-border: #e5e7eb;
+  --color-border-light: rgba(255,255,255,.7);
+
+  --glass-bg: rgba(255,255,255,.80);
+
+  /* ===============================
+     SHADOWS
+  =============================== */
+
+  --shadow-sm: 0 4px 18px rgba(15,23,42,.05);
+
+  --shadow-md: 0 12px 40px rgba(15,23,42,.08);
+
+  --shadow-lg: 0 24px 80px rgba(15,23,42,.10);
+
+  --shadow-xl: 0 40px 120px rgba(15,23,42,.12);
+
+  --shadow-glow: 0 0 50px rgba(0,194,168,.30);
+
+  /* ===============================
+     RADIUS
+  =============================== */
+
+  --radius-xs:8px;
+  --radius-sm:12px;
+  --radius-md:18px;
+  --radius-lg:24px;
+  --radius-xl:32px;
+  --radius-pill:9999px;
+
+  /* ===============================
+     SPACING
+  =============================== */
+
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-10:40px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-20:80px;
+  --space-24:96px;
+  --space-30:120px;
+
+  /* ===============================
+     TYPOGRAPHY
+  =============================== */
+
+  --font-family:'Inter',sans-serif;
+
+  --display-xl:64px;
+  --display-lg:56px;
+
+  --heading-xl:42px;
+  --heading-lg:32px;
+  --heading-md:24px;
+
+  --body-lg:18px;
+  --body-md:16px;
+  --caption:14px;
+
+  /* ===============================
+     TRANSITIONS
+  =============================== */
+
+  --transition-fast:.2s ease;
+
+  --transition-normal:.35s ease;
+
+  --transition-slow:.6s ease;
+
+  /* ===============================
+     GRADIENTS
+  =============================== */
+
+  --gradient-brand:
+  linear-gradient(
+  135deg,
+  #00C2A8,
+  #00D4FF,
+  #2563EB
+  );
+}

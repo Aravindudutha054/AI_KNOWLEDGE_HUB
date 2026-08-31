@@ -1,0 +1,535 @@
+/* =========================================================
+   RecentDocuments.module.css
+   Part 1
+========================================================= */
+
+/* ========================================
+   Document List
+======================================== */
+
+.list{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ========================================
+   Document Item
+======================================== */
+
+.item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #EEF2F5;
+
+    transition:
+
+        all .25s ease;
+
+}
+
+.item:last-child{
+
+    border-bottom:none;
+
+}
+
+.item:hover{
+
+    padding-left:10px;
+
+}
+
+/* ========================================
+   Left Section
+======================================== */
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+/* ========================================
+   File Icon
+======================================== */
+
+.icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:rgba(11,125,110,.08);
+
+    color:#0B7D6E;
+
+    flex-shrink:0;
+
+    transition:
+
+        transform .25s ease,
+
+        background .25s ease;
+
+}
+
+.item:hover .icon{
+
+    transform:scale(1.08);
+
+    background:rgba(11,125,110,.12);
+
+}
+
+.icon svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
+/* ========================================
+   Content
+======================================== */
+
+.content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.content h4{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#162536;
+
+    margin-bottom:6px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+/* =========================================================
+   RecentDocuments.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Meta Information
+======================================== */
+
+.meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ========================================
+   Department
+======================================== */
+
+.department{
+
+    padding:5px 10px;
+
+    border-radius:999px;
+
+    background:rgba(11,125,110,.08);
+
+    color:#0B7D6E;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ======================================== */
+
+.separator{
+
+    color:#C4CDD4;
+
+    font-size:12px;
+
+}
+
+/* ========================================
+   Time
+======================================== */
+
+.time{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:12px;
+
+    color:#8A98A4;
+
+}
+
+.time svg{
+
+    width:13px;
+
+    height:13px;
+
+}
+
+/* ========================================
+   Open Button
+======================================== */
+
+.openButton{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#F6F8FA;
+
+    color:#5F6E79;
+
+    cursor:pointer;
+
+    transition:
+
+        all .25s ease;
+
+    flex-shrink:0;
+
+}
+
+/* ======================================== */
+
+.openButton span{
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ======================================== */
+
+.openButton svg{
+
+    transition:
+
+        transform .25s ease;
+
+}
+
+/* ========================================
+   Hover Effects
+======================================== */
+
+.item:hover .content h4{
+
+    color:#0B7D6E;
+
+}
+
+.item:hover .openButton{
+
+    background:#0B7D6E;
+
+    color:#FFFFFF;
+
+}
+
+.item:hover .openButton svg{
+
+    transform:translateX(4px);
+
+}
+
+.content h4,
+
+.openButton{
+
+    transition:.25s ease;
+
+}
+
+/* =========================================================
+   RecentDocuments.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width:992px){
+
+    .item{
+
+        gap:16px;
+
+    }
+
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width:768px){
+
+    .item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:16px;
+
+        padding:18px 0;
+
+    }
+
+    .left{
+
+        width:100%;
+
+    }
+
+    .content h4{
+
+        font-size:14px;
+
+    }
+
+    .meta{
+
+        gap:8px;
+
+    }
+
+    .openButton{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width:480px){
+
+    .icon{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .icon svg{
+
+        width:18px;
+
+        height:18px;
+
+    }
+
+    .department{
+
+        font-size:11px;
+
+        padding:4px 8px;
+
+    }
+
+    .time{
+
+        font-size:11px;
+
+    }
+
+    .openButton{
+
+        padding:10px 14px;
+
+    }
+
+}
+
+/* ========================================
+   Entry Animation
+======================================== */
+
+.item{
+
+    animation:itemFade .45s ease;
+
+}
+
+@keyframes itemFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(16px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ========================================
+   Focus State
+======================================== */
+
+.openButton:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+
+        0 0 0 4px rgba(11,125,110,.10);
+
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   Skeleton Loading
+========================================== */
+
+.skeletonTitle{
+
+    width:180px;
+
+    height:16px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    margin-bottom:8px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonMeta{
+
+    width:120px;
+
+    height:12px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.55;
+
+    }
+
+}
+

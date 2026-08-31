@@ -1,0 +1,474 @@
+/* =========================================================
+   ChatLayout.module.css
+   Part 1
+========================================================= */
+
+/* ========================================
+   Workspace Layout
+======================================== */
+
+.layout{
+
+    display:grid;
+
+    grid-template-columns:
+
+        300px
+
+        minmax(0,1fr)
+
+        340px;
+
+    gap:20px;
+
+    height:
+
+        calc(100vh - 96px);
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+/* ========================================
+   Sidebar
+======================================== */
+
+.sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7ECEF;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+/* ========================================
+   Main Chat Area
+======================================== */
+
+.main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7ECEF;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    min-width:0;
+
+}
+
+/* ========================================
+   Sources Panel
+======================================== */
+
+.sources{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7ECEF;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+/* ========================================
+   Common Containers
+======================================== */
+
+.sidebar,
+
+.main,
+
+.sources{
+
+    box-shadow:
+
+        0 10px 28px rgba(0,0,0,.04);
+
+    transition:
+
+        box-shadow .25s ease,
+
+        border-color .25s ease;
+
+}
+
+.sidebar:hover,
+
+.main:hover,
+
+.sources:hover{
+
+    border-color:#D7E2E5;
+
+    box-shadow:
+
+        0 16px 36px rgba(0,0,0,.06);
+
+}
+/* =========================================================
+   ChatLayout.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Overflow
+======================================== */
+
+.sidebar,
+
+.main,
+
+.sources{
+
+    min-height:0;
+
+}
+
+.main{
+
+    position:relative;
+
+}
+
+/* ========================================
+   Scroll Containers
+======================================== */
+
+.sidebar,
+
+.sources{
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+}
+
+.main{
+
+    overflow:hidden;
+
+}
+
+/* ========================================
+   Smooth Scrolling
+======================================== */
+
+.sidebar,
+
+.main,
+
+.sources{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ========================================
+   Custom Scrollbar
+======================================== */
+
+.sidebar::-webkit-scrollbar,
+
+.main::-webkit-scrollbar,
+
+.sources::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.sidebar::-webkit-scrollbar-track,
+
+.main::-webkit-scrollbar-track,
+
+.sources::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+
+.main::-webkit-scrollbar-thumb,
+
+.sources::-webkit-scrollbar-thumb{
+
+    background:#D6DEE3;
+
+    border-radius:999px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+
+.main::-webkit-scrollbar-thumb:hover,
+
+.sources::-webkit-scrollbar-thumb:hover{
+
+    background:#BCC8CF;
+
+}
+
+/* Firefox */
+
+.sidebar,
+
+.main,
+
+.sources{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#D6DEE3 transparent;
+
+}
+
+/* ========================================
+   Workspace Sections
+======================================== */
+
+.sidebar>*,
+
+.sources>*{
+
+    flex:1;
+
+}
+
+.main>*{
+
+    width:100%;
+
+}
+
+/* ========================================
+   Background
+======================================== */
+
+.layout{
+
+    position:relative;
+
+}
+
+.layout::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.25),
+
+            transparent 120px
+
+        );
+
+}
+/* =========================================================
+   ChatLayout.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Large Tablet
+======================================== */
+
+@media (max-width:1200px){
+
+    .layout{
+
+        grid-template-columns:
+
+            280px
+
+            minmax(0,1fr);
+
+    }
+
+    .sources{
+
+        display:none;
+
+    }
+
+}
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width:992px){
+
+    .layout{
+
+        grid-template-columns:
+
+            260px
+
+            minmax(0,1fr);
+
+        gap:16px;
+
+        height:calc(100vh - 88px);
+
+    }
+
+    .sidebar,
+
+    .main{
+
+        border-radius:18px;
+
+    }
+
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width:768px){
+
+    .layout{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:16px;
+
+        height:auto;
+
+        min-height:calc(100vh - 88px);
+
+    }
+
+    .sidebar{
+
+        height:220px;
+
+        border-radius:16px;
+
+    }
+
+    .main{
+
+        flex:1;
+
+        min-height:70vh;
+
+        border-radius:16px;
+
+    }
+
+}
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width:480px){
+
+    .layout{
+
+        gap:12px;
+
+    }
+
+    .sidebar{
+
+        height:180px;
+
+    }
+
+    .main{
+
+        min-height:65vh;
+
+    }
+
+}
+
+/* ========================================
+   Hover Polish
+======================================== */
+
+.sidebar,
+
+.main,
+
+.sources{
+
+    transition:
+
+        border-color .25s ease,
+
+        box-shadow .25s ease,
+
+        transform .25s ease;
+
+}
+
+.sidebar:hover,
+
+.main:hover,
+
+.sources:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

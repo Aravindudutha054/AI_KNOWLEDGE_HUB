@@ -1,0 +1,191 @@
+.container{
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:18px;
+
+    padding:24px;
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.header h2{
+
+    margin:0;
+
+    color:#0F172A;
+
+}
+
+.header span{
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+.list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.card{
+
+    border:1px solid #E2E8F0;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    transition:.2s;
+
+}
+
+.card:hover{
+
+    border-color:#2563EB;
+
+}
+
+.top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.department{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+.department h3{
+
+    margin:0;
+
+    font-size:16px;
+
+    color:#0F172A;
+
+}
+
+.active{
+
+    background:#DCFCE7;
+
+    color:#166534;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.stats{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:18px;
+
+}
+
+.stats div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#475569;
+
+    font-size:14px;
+
+}
+
+.health{
+
+    margin-top:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#16A34A;
+
+    font-weight:600;
+
+    font-size:13px;
+
+}
+
+.skeleton{
+
+    height:120px;
+
+    background:#E5E7EB;
+
+    border-radius:14px;
+
+    margin-bottom:14px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.5;
+
+    }
+
+}

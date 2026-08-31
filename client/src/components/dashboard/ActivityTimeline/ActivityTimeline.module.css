@@ -1,0 +1,564 @@
+/* =========================================================
+   ActivityTimeline.module.css
+   Part 1
+========================================================= */
+
+/* ========================================
+   Timeline
+======================================== */
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:0;
+
+}
+
+/* ========================================
+   Timeline Item
+======================================== */
+
+.item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:20px 0;
+
+    position:relative;
+
+}
+
+.item:not(:last-child){
+
+    border-bottom:1px solid #EEF2F5;
+
+}
+
+/* ========================================
+   Timeline Marker
+======================================== */
+
+.marker{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+/* ========================================
+   Activity Icon
+======================================== */
+
+.icon{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.item:hover .icon{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+        0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.icon svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ========================================
+   Timeline Line
+======================================== */
+
+.line{
+
+    width:2px;
+
+    flex:1;
+
+    min-height:60px;
+
+    margin-top:8px;
+
+    background:#E7ECEF;
+
+}
+
+.item:last-child .line{
+
+    display:none;
+
+}
+
+/* ========================================
+   Content
+======================================== */
+
+.content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+/* =========================================================
+   ActivityTimeline.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Title
+======================================== */
+
+.content h4{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#162536;
+
+    line-height:1.5;
+
+    margin-bottom:10px;
+
+    transition:.25s ease;
+
+}
+
+.item:hover .content h4{
+
+    color:#0B7D6E;
+
+}
+
+/* ========================================
+   Meta Information
+======================================== */
+
+.meta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:14px;
+
+}
+
+/* ========================================
+   Department
+======================================== */
+
+.department{
+
+    padding:5px 10px;
+
+    border-radius:999px;
+
+    background:rgba(11,125,110,.08);
+
+    color:#0B7D6E;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ======================================== */
+
+.separator{
+
+    color:#C4CDD4;
+
+    font-size:12px;
+
+}
+
+/* ========================================
+   Time
+======================================== */
+
+.time{
+
+    font-size:12px;
+
+    color:#8A98A4;
+
+    font-weight:500;
+
+}
+
+/* ========================================
+   Status
+======================================== */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#F8FAFB;
+
+    border:1px solid #E7ECEF;
+
+    color:#5F6E79;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+/* ========================================
+   Status Dot
+======================================== */
+
+.statusDot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    animation:pulseStatus 2s infinite;
+
+}
+
+/* ========================================
+   Hover Effects
+======================================== */
+
+.item{
+
+    transition:
+
+        padding-left .25s ease,
+
+        background .25s ease;
+
+}
+
+.item:hover{
+
+    padding-left:8px;
+
+}
+
+.item:hover .status{
+
+    border-color:#D6E2E5;
+
+    background:#FFFFFF;
+
+    box-shadow:
+
+        0 4px 12px rgba(0,0,0,.04);
+
+}
+
+/* =========================================================
+   ActivityTimeline.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width:992px){
+
+    .item{
+
+        gap:16px;
+
+    }
+
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width:768px){
+
+    .item{
+
+        gap:14px;
+
+        padding:18px 0;
+
+    }
+
+    .icon{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+    .icon svg{
+
+        width:16px;
+
+        height:16px;
+
+    }
+
+    .line{
+
+        min-height:52px;
+
+    }
+
+    .content h4{
+
+        font-size:14px;
+
+    }
+
+    .meta{
+
+        gap:8px;
+
+    }
+
+}
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width:480px){
+
+    .item{
+
+        gap:12px;
+
+    }
+
+    .icon{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .department{
+
+        font-size:11px;
+
+        padding:4px 8px;
+
+    }
+
+    .time{
+
+        font-size:11px;
+
+    }
+
+    .status{
+
+        font-size:11px;
+
+        padding:5px 10px;
+
+    }
+
+}
+
+/* ========================================
+   Timeline Animation
+======================================== */
+
+.item{
+
+    animation:itemFade .45s ease;
+
+}
+
+@keyframes itemFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-14px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ========================================
+   Status Pulse
+======================================== */
+
+@keyframes pulseStatus{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.7;
+
+    }
+
+    50%{
+
+        transform:scale(1.4);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.7;
+
+    }
+
+}
+
+/* ========================================
+   Focus Accessibility
+======================================== */
+
+.item:focus-within{
+
+    border-radius:12px;
+
+    background:#FAFCFC;
+
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+/* ==========================================
+   Skeleton Loading
+========================================== */
+
+.skeletonTitle{
+
+    width:220px;
+
+    height:16px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    margin-bottom:8px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+.skeletonMeta{
+
+    width:120px;
+
+    height:12px;
+
+    border-radius:8px;
+
+    background:#E5E7EB;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.55;
+
+    }
+
+}

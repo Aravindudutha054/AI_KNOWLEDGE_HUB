@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.search {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.select {
+    width: 180px;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+}

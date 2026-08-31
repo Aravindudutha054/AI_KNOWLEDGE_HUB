@@ -1,0 +1,769 @@
+/* =========================================================
+   WorkspaceLoader.module.css
+   Part 1
+========================================================= */
+
+.page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F8FBFC 0%,
+            #F3F7F8 100%
+        );
+
+}
+
+/* ======================================== */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ======================================== */
+
+.card{
+
+    width:100%;
+
+    max-width:480px;
+
+    padding:40px 36px;
+
+    border-radius:24px;
+
+    background:
+
+        rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border:
+
+        1px solid rgba(220,228,235,.85);
+
+    box-shadow:
+
+        0 24px 60px rgba(0,0,0,.06);
+
+}
+
+/* ======================================== */
+
+.logo{
+
+    width:68px;
+
+    height:68px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:
+
+        rgba(11,125,110,.08);
+
+    color:#0B7D6E;
+
+}
+
+/* ======================================== */
+
+.badge{
+
+    width:max-content;
+
+    margin:20px auto 0;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(11,125,110,.08);
+
+    border:
+
+        1px solid rgba(11,125,110,.15);
+
+    color:#0B7D6E;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+}
+
+/* ======================================== */
+
+.title{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#162536;
+
+}
+
+/* ======================================== */
+
+.subtitle{
+
+    margin-top:10px;
+
+    margin-bottom:34px;
+
+    text-align:center;
+
+    color:#6D7A85;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/* ======================================== */
+
+.stepList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+/* =========================================================
+   WorkspaceLoader.module.css
+   Part 2
+========================================================= */
+
+/* ========================================
+   Loading Steps
+======================================== */
+
+.step{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:14px 16px;
+
+    border-radius:16px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7ECEF;
+
+    transition:.35s;
+
+}
+
+/* ======================================== */
+
+.icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+        rgba(11,125,110,.08);
+
+    color:#8A98A4;
+
+    transition:.35s;
+
+}
+
+/* ======================================== */
+
+.stepContent{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+}
+
+.stepContent h4{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#243342;
+
+}
+
+.stepContent span{
+
+    font-size:12px;
+
+    color:#8B97A2;
+
+}
+
+/* ======================================== */
+
+.active{
+
+    border-color:
+
+        rgba(11,125,110,.25);
+
+    background:
+
+        rgba(11,125,110,.03);
+
+}
+
+.active .icon{
+
+    color:#0B7D6E;
+
+    background:
+
+        rgba(11,125,110,.12);
+
+    animation:
+
+        pulse 1.5s infinite;
+
+}
+
+/* ======================================== */
+
+.completed{
+
+    border-color:
+
+        rgba(16,185,129,.18);
+
+    background:
+
+        rgba(16,185,129,.05);
+
+}
+
+.completed .icon{
+
+    background:
+
+        rgba(16,185,129,.12);
+
+    color:#10B981;
+
+}
+
+/* ========================================
+   Progress
+======================================== */
+
+.progressSection{
+
+    margin-top:34px;
+
+}
+
+.progressTrack{
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#E6ECEF;
+
+}
+
+.progressBar{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #0B7D6E,
+
+            #18A58F
+
+        );
+
+}
+
+/* ======================================== */
+
+.progressInfo{
+
+    margin-top:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    color:#6D7A85;
+
+}
+
+/* ========================================
+   Role & Department
+======================================== */
+
+.info{
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.infoItem{
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E7ECEF;
+
+}
+
+.infoItem label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    color:#8A98A4;
+
+}
+
+.infoItem strong{
+
+    font-size:15px;
+
+    color:#162536;
+
+    font-weight:700;
+
+}
+
+/* =========================================================
+   WorkspaceLoader.module.css
+   Part 3
+========================================================= */
+
+/* ========================================
+   Footer
+======================================== */
+
+.footer{
+
+    margin-top:34px;
+
+    padding-top:24px;
+
+    border-top:1px solid #E7ECEF;
+
+    text-align:center;
+
+}
+
+.footer p{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#162536;
+
+}
+
+.footer span{
+
+    display:block;
+
+    margin-top:6px;
+
+    font-size:11px;
+
+    color:#8B97A2;
+
+    letter-spacing:.04em;
+
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width:768px){
+
+    .container{
+
+        padding:24px;
+
+    }
+
+    .card{
+
+        max-width:360px;
+
+        padding:28px 22px;
+
+    }
+
+    .logo{
+
+        width:58px;
+
+        height:58px;
+
+    }
+
+    .logo svg{
+
+        width:28px;
+
+        height:28px;
+
+    }
+
+    .badge{
+
+        font-size:10px;
+
+        padding:7px 16px;
+
+    }
+
+    .title{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:13px;
+
+        margin-bottom:28px;
+
+    }
+
+    .step{
+
+        padding:12px;
+
+    }
+
+    .icon{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .icon svg{
+
+        width:16px;
+
+        height:16px;
+
+    }
+
+    .stepContent h4{
+
+        font-size:13px;
+
+    }
+
+    .stepContent span{
+
+        font-size:11px;
+
+    }
+
+    .info{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .container{
+
+        padding:18px;
+
+    }
+
+    .card{
+
+        padding:22px 18px;
+
+        border-radius:18px;
+
+    }
+
+    .title{
+
+        font-size:24px;
+
+    }
+
+    .subtitle{
+
+        font-size:12px;
+
+    }
+
+    .progressInfo{
+
+        font-size:11px;
+
+    }
+
+    .footer p{
+
+        font-size:12px;
+
+    }
+
+    .footer span{
+
+        font-size:10px;
+
+    }
+
+}
+
+/* ========================================
+   Animations
+======================================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 rgba(11,125,110,0);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        box-shadow:0 0 18px rgba(11,125,110,.18);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 rgba(11,125,110,0);
+
+    }
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.card{
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.page{
+
+    animation:fadePage .45s ease;
+
+}
+
+/* ========================================
+   Progress Shine
+======================================== */
+
+.progressBar{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.progressBar::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.65),
+
+            transparent
+
+        );
+
+    animation:
+
+        shimmer 1.8s linear infinite;
+
+}
+
+@keyframes shimmer{
+
+    0%{
+
+        transform:translateX(-100%);
+
+    }
+
+    100%{
+
+        transform:translateX(100%);
+
+    }
+
+}

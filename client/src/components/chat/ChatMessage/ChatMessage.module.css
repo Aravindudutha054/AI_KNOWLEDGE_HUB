@@ -1,0 +1,121 @@
+.message{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+}
+
+.avatar{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.user .avatar{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+.assistant .avatar{
+
+    background:#10B981;
+
+    color:white;
+
+}
+
+.body{
+
+    flex:1;
+
+}
+
+.content{
+
+    background:white;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    white-space:pre-wrap;
+
+    line-height:1.7;
+
+    color:#111827;
+
+}
+
+.user .content{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+}
+
+.meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:10px;
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.meta button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#2563EB;
+
+}

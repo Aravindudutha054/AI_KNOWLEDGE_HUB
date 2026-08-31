@@ -1,0 +1,359 @@
+/* ==========================================
+   ShaderBackground.module.css
+   Enterprise AI Knowledge Hub
+========================================== */
+
+.wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+  background: #f8fafc;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================
+   Gradient Blobs
+========================================== */
+
+.blurTopLeft {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  left: -220px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 194, 168, 0.28) 0%,
+    rgba(0, 194, 168, 0.12) 40%,
+    transparent 70%
+  );
+
+  filter: blur(120px);
+
+  animation: blobOne 20s ease-in-out infinite;
+}
+
+.blurTopRight {
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  top: 100px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.25) 0%,
+    rgba(37, 99, 235, 0.1) 45%,
+    transparent 70%
+  );
+
+  filter: blur(140px);
+
+  animation: blobTwo 24s ease-in-out infinite;
+}
+
+.blurBottom {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  left: 50%;
+  bottom: -350px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.22) 0%,
+    rgba(0, 212, 255, 0.08) 45%,
+    transparent 72%
+  );
+
+  filter: blur(150px);
+
+  animation: blobThree 26s ease-in-out infinite;
+}
+
+/* ==========================================
+   Noise Overlay
+========================================== */
+
+.noise {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.035;
+
+  background-image:
+    radial-gradient(
+      rgba(0, 0, 0, .8) 0.6px,
+      transparent 0.6px
+    );
+
+  background-size: 18px 18px;
+
+  mix-blend-mode: multiply;
+}
+
+/* ==========================================
+   Glow Overlay
+========================================== */
+
+.wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.65),
+      rgba(255,255,255,.05)
+    );
+
+  pointer-events: none;
+}
+
+.wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(255,255,255,.25),
+        transparent 30%
+      ),
+
+      radial-gradient(
+        circle at 80% 35%,
+        rgba(255,255,255,.18),
+        transparent 28%
+      ),
+
+      radial-gradient(
+        circle at 55% 85%,
+        rgba(255,255,255,.18),
+        transparent 25%
+      );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   Animations
+========================================== */
+
+@keyframes blobOne {
+
+  0% {
+
+    transform:
+      translate(0,0)
+      scale(1);
+
+  }
+
+  25%{
+
+    transform:
+      translate(70px,-40px)
+      scale(1.08);
+
+  }
+
+  50%{
+
+    transform:
+      translate(130px,50px)
+      scale(.95);
+
+  }
+
+  75%{
+
+    transform:
+      translate(40px,100px)
+      scale(1.05);
+
+  }
+
+  100%{
+
+    transform:
+      translate(0,0)
+      scale(1);
+
+  }
+
+}
+
+@keyframes blobTwo {
+
+  0%{
+
+    transform:
+      translate(0,0)
+      scale(1);
+
+  }
+
+  30%{
+
+    transform:
+      translate(-90px,40px)
+      scale(1.06);
+
+  }
+
+  60%{
+
+    transform:
+      translate(-40px,-60px)
+      scale(.96);
+
+  }
+
+  100%{
+
+    transform:
+      translate(0,0)
+      scale(1);
+
+  }
+
+}
+
+@keyframes blobThree {
+
+  0%{
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+
+  }
+
+  25%{
+
+    transform:
+      translateX(-46%)
+      translateY(-70px)
+      scale(1.05);
+
+  }
+
+  50%{
+
+    transform:
+      translateX(-56%)
+      translateY(-20px)
+      scale(.94);
+
+  }
+
+  75%{
+
+    transform:
+      translateX(-48%)
+      translateY(-120px)
+      scale(1.04);
+
+  }
+
+  100%{
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 1024px){
+
+.blurTopLeft{
+
+width:500px;
+height:500px;
+
+}
+
+.blurTopRight{
+
+width:480px;
+height:480px;
+
+}
+
+.blurBottom{
+
+width:520px;
+height:520px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.blurTopLeft{
+
+left:-260px;
+
+top:-220px;
+
+}
+
+.blurTopRight{
+
+right:-260px;
+
+}
+
+.blurBottom{
+
+width:420px;
+height:420px;
+
+bottom:-250px;
+
+}
+
+.noise{
+
+opacity:.025;
+
+}
+
+}

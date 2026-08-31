@@ -1,0 +1,67 @@
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:32px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+
+}
+
+.icon{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:14px;
+
+    background:#eef5ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#2563eb;
+
+}
+
+.card h4{
+
+    margin:0;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+.card h2{
+
+    margin-top:6px;
+
+    font-size:30px;
+
+}
